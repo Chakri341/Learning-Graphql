@@ -1,0 +1,21 @@
+name: Manual CI
+
+on:
+  workflow_dispatch
+
+jobs:
+  run-manual-ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Print Start Message
+        run: echo "Manual CI started 🚀"
+
+      - name: Show Files
+        run: ls -la
+
+      - name: Print End Message
+        run: echo "Manual CI finished ✅"
